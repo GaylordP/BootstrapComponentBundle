@@ -1,0 +1,7 @@
+services:
+    GaylordP\BootstrapComponentBundle\Twig\Extension:
+        arguments:
+            - '@twig'
+            - '@translator'
+        tags:
+            - 'twig.extension'

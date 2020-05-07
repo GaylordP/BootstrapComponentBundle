@@ -1,0 +1,8 @@
+label.required:not(.form-check-label):not(.custom-control-label):before,
+legend.required:before {
+    content: "* ";
+}
+
+.form-inline > select:not(:last-of-type) {
+    margin-right: .25rem;
+}

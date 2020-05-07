@@ -1,0 +1,4 @@
+<form action="{{ app.request.requestUri }}" method="post">
+    <input type="hidden" name="token" value="{{ csrf_token('delete') }}">
+    {{ btn_text|button('_delete_', btn_ico, btn_ico_only, btn_attr) }}
+</form>

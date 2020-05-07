@@ -1,0 +1,24 @@
+{% if
+    ico is not same as (null)
+    and ico_only is same as(true)
+    and text is defined
+    and text is not same as(null)
+%}
+    {% set attr = attr|merge({
+        'data-toggle': 'tooltip',
+        'title': text,
+    }) %}
+{% endif %}
+
+<span{% for attrname, attrvalue in attr %}{% if attrvalue is not same as(false) %} {{ attrname }}="{{ attrvalue }}"{% endif %}{% endfor %}>
+    {% if ico is not same as(null) %}
+        <i class="{{ ico }}"></i>
+    {% endif %}
+    {% if
+        ico_only is same as(false)
+        and text is defined
+        and text is not same as(null)
+    %}
+        {{ text|raw }}
+    {% endif %}
+</span>
