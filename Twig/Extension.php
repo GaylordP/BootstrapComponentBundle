@@ -254,13 +254,13 @@ class Extension extends AbstractExtension
     {
         if (null === $ico) {
             if ('_delete_' === $color) {
-                return 'fas fa-trash';
+                return $this->twig->render('@BootstrapComponent/ico/_delete.html.twig');
             } elseif ('_edit_' === $color) {
-                return 'fas fa-edit';
+                return $this->twig->render('@BootstrapComponent/ico/_edit.html.twig');
             } elseif ('_new_' === $color) {
-                return 'fas fa-plus-circle';
+                return $this->twig->render('@BootstrapComponent/ico/_new.html.twig');
             } elseif ('_show_' === $color) {
-                return 'fas fa-eye';
+                return $this->twig->render('@BootstrapComponent/ico/_show.html.twig');
             }
         }
 
